@@ -7,12 +7,16 @@ int main() {
     
     int n;
     cin>>n;
-    int ans=0,i=0;;
+    int ans=0;
+    int i=0;;
     while(n!=0)
     {
         int rem = n&1;
+        
+        // Use to Find a reverse value          
         ans =(rem *pow(10,i))+ans;
         
+        // Right Shift
         n=n>>1;
         i++;
     }
