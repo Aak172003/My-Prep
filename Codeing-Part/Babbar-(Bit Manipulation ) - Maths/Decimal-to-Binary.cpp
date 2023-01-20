@@ -11,6 +11,9 @@ int main() {
     int i=0;;
     while(n!=0)
     {
+        /* THE NEXT LINE IS USED TO FIND LAST BIT 1 OR 0 HAI ? 
+         then bit use hone ke bdd ek brr right shift krdenge */
+        
         int rem = n&1;
         
         // Use to Find a reverse value          
