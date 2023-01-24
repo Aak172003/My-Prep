@@ -27,7 +27,7 @@ vector<int> findArrayIntersection(vector<int> &arr1, int n, vector<int> &arr2, i
 	// }
 	// return ans;
 	
-	//   Optimise approach  TC - o(N) - Babbar Bhaiya
+	//   Optimise approach  TC - o(N) - Babbar Bhaiya  using TWO POINTER APPROACH 
 
 	int i=0,j=0;
 	vector<int>ans;
