@@ -63,7 +63,7 @@ public:
 };
 
 
-//  If Question says Total Occurance of any number in sorted array 
+                                            Note -  If Question says Total Occurance of any number in sorted array 
 /*
 
 1 -Mehod is to Linear seach which Takes O(N) Time Complexity 
