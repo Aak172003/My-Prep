@@ -63,6 +63,16 @@ public:
 };
 
 
+//  If Question says Total Occurance of any number in sorted array 
+/*
+
+1 -Mehod is to Linear seach which Takes O(N) Time Complexity 
+2 -Method use Binary Seach 
+   step 1  - First Find Fist And Last Occurance of that target Element 
+   step 2 - Use Formula to Find Total Occurance 
+            Total Occurance = ( Last Occurance - First Occurance ) + 1 
+
+*/
 
 //                                                             Using PAIR Method 
 
