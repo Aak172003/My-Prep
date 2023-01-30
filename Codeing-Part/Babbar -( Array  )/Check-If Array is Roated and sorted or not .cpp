@@ -27,10 +27,7 @@ bool check(vector<int>& arr)
     {
         count++;
     }
-    if (count>1)
-    {
-        return false;
-    }
-    return true;
+   // If All Value are same means there is Example  = {1,1,1}
+    return (count<=1);
 }
 };
