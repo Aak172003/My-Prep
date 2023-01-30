@@ -1,58 +1,78 @@
-/*
-For Upper To Lower - ch-'A'+'a'
-For Lower to Upper - ch-'a'+'A'
-*/
-class Solution
-{
-public:
- char tolowerCase(char ch)
+
+// /*
+// For Upper To Lower - ch-'A'+'a'
+// For Lower to Upper - ch-'a'+'A'
+// */
+
+// Babbar Bhaiya Method 
+
+class Solution {
+private:
+    bool valid(char ch) 
     {
-        if (ch>='A' && ch <='Z')
-                ch = ch - 'A' + 'a';
-        return ch;
-    } 
- bool isValid(char ch)
-    {
-        if ((ch >= 'a' && ch <= 'z') || (ch >= '0' && ch <= '9') || (ch >= 'A' && ch <= 'Z'))
+        if( (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z') || (ch >= '0' && ch <= '9')) {
             return true;
-            
-        return false;
+        }
+        else
+            return false;
     }
-   
-    bool isPalindrome(string s) {
+    
+    char toLowerCase(char ch) 
+{
+    if( (ch >='a' && ch <='z') || (ch >='0' && ch <='9') )
+        return ch;
+    else
+{
+        char temp = ch - 'A' + 'a';
+        return temp;
+    }
+}
+    bool checkPalindrome(string a) 
+{
+    int start = 0;
+    int end = a.length()-1;
+
+    while(start<=end) {
+        if(a[start] != a[end])
+        {
+            return false;       
+        }
+        else
+        {
+            start++;
+            end--;
+        }
+    }
+    return true;
+}
+public:
+    bool isPalindrome(string s) 
+{
         
-        int n = 0;
+        //faltu character hatado
+        string temp = "";
+
         //faaltu characters pehle hi hatado
         // (s[index]>='0' && s[index]<='9') || (s[index]>='a'&& s[index]<='z') || (s[index]>='A' && s[index]<='Z')){
         // In me se kuch bhi aata hai to string avalid hai 
-        for (int i = 0; i <s.length(); i++)
-        {
-            if (isValid(s[i]))
-                {
-                    s[n++] = s[i];
-                }
-        }
-        //sabhi alpabets ko lower case me kardo
-        for (int i = 0; i < n; i++)
-        {
-            s[i] = tolowerCase(s[i]);
-        }
-
-        //basic palindrome check karne wala function lagado
-        int start = 0;
-        int end = n - 1;
-
-        while (start <= end)
-        {
-            if (s[start] != s[end])
-             return false;
-            else
+        
+        for(int j=0; j<s.length(); j++) 
+        {   
+            if(valid(s[j])) 
             {
-                start++;
-                end--;
+                temp.push_back(s[j]);
             }
         }
-    return true;
-    }  
-};    
+        
+        //sabhi alpabets ko lower case me kardo
+        for(int j=0; j<temp.length(); j++) { 
+            temp[j] = toLowerCase(temp[j]);
+        }
+        //check palindrome
+        return checkPalindrome(temp);
+        
+    }
+};
+
+
 	
