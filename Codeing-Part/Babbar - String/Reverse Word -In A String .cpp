@@ -45,8 +45,8 @@ class Solution {
                 // Add space 
 				s+=' ';
 			}
-            
-			s.pop_back();  // used to remove last spaces if occur in string
+               // At last we have a null character , so we need to remove last null Character from string 
+			s.pop_back();  
 			return s;
 		}
 	};
