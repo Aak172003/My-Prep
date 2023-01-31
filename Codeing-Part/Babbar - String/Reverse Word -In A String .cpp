@@ -7,6 +7,7 @@ LeetCode Link - https://leetcode.com/problems/reverse-words-in-a-string/submissi
 2 - pop_back() - pop_back() function is used to pop or remove elements from a list from the back. The value is removed from the list from the end, and the container size is decreased by 1
 */
 
+
 class Solution {
 	public:
 		string reverseWords(string s) 
@@ -18,8 +19,10 @@ class Solution {
 			for(int i=0;i<n;i++)
             {
                 // until not find spaces add the character into temp
+                // This is how we access seperate string from a big sentence , then push into stack 
 				if(s[i]!=' ') temp+=s[i];
-
+                
+                // temp.size()>0 ths condition is help when we takle with multiple spaces , leading spaces or , Trailing Spaces ,, in case of multiple spaces , we add into temp but its size not greater than 0 
 				else if(temp.size()>0)
                 {
 					st.push(temp);
