@@ -4,7 +4,7 @@ public:
         int product=1;
         int sum=0;
         
-        // jb tk n = 0 nahi hota tb tk loop goona run up
+        // jb tk n = 0 nahi hota tb tk loop goona run up , 
         
         while(n!=0)
         {
