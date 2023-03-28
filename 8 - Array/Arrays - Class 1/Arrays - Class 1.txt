@@ -1,0 +1,24 @@
+declaration
+initialization
+making array at runtime
+index and access in array
+taking input in array
+take n elements and print their doubles
+make all items of an array to 1
+functions and array
+linear search function
+linear search without function
+count 0s and 1s in array
+maximum number in an array
+minimum number in an array
+print extremes of an array
+reverse an array
+
+HOMEWORK
+
+sizeof(arr);
+    initially 0
+3 ways to implement swap function
+    using + -
+    using temp variable
+    using xor (IMP)
