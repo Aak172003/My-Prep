@@ -21,6 +21,7 @@ public:
         this->next = NULL;
     }
 
+    
     // TODO: Write a destrcutor to delete a node
     ~Node()
     {
@@ -31,11 +32,14 @@ public:
         // Memory Free Krane ka Code ,
         //  agr jisko delete kr rhe hai agr wo kisi or ,
         // ko bhi point kr rha hai to waha se bhi usko disconnect krna pdega
-        if (this->next != NULL)
-        {
-            delete next;
-            this->next = NULL;
-        }
+
+        //                         Optional 
+        
+        // if (this->next != NULL)
+        // {
+        //     delete next;
+        //     this->next = NULL;
+        // }
         cout << "Memory is Free : " << value << endl;
     }
 };
